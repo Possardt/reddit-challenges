@@ -1,0 +1,18 @@
+{
+  "name": "reddit-challenges",
+  "version": "1.0.0",
+  "description": "A node app with hot reloading for solving reddit problems",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine",
+    "start": "nodemon --watch src -x npm run test"
+  },
+  "author": "Ryan Possardt",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^1.17.2"
+  },
+  "devDependencies": {
+    "jasmine": "^3.1.0"
+  }
+}
