@@ -1,7 +1,9 @@
-describe('A suite', () => {
+const challenge = require('./challenge');
 
+describe('A challenge', () => {
   it('should work', () => {
-    expect(true).toBe(true);    
+    challenge();
+    expect(true).toBe(true);
   });
 
 });
