@@ -6,9 +6,9 @@
   "scripts": {
     "test": "jasmine",
     "start": "nodemon --watch src -x jasmine ./src/challenge.spec.js",
-    "testArchive": "npm run archiveEasy",
+    "testArchive": "npm run archiveEasy && npm run archiveIntermediate",
     "archiveEasy": "jasmine ./archive/easy/*",
-    "archiveMedium": "jasmine ./archive/medium/*",
+    "archiveIntermediate": "jasmine ./archive/intermediate/*",
     "archiveHard": "jasmine ./archive/hard/*"
   },
   "author": "Ryan Possardt",
