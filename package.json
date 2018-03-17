@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "jasmine",
-    "start": "nodemon --watch src -x npm run test"
+    "start": "nodemon --watch src -x jasmine ./src/challenge.spec.js",
+    "testArchive": "npm run archiveEasy",
+    "archiveEasy": "jasmine ./archive/easy/*",
+    "archiveMedium": "jasmine ./archive/medium/*",
+    "archiveHard": "jasmine ./archive/hard/*"
   },
   "author": "Ryan Possardt",
   "license": "ISC",

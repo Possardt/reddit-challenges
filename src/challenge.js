@@ -1,6 +1,12 @@
-let challengeFunction = () => {
-  console.log('im a challenge');
+/*
+  [POST TITLE]
+
+  [POST DESCRIPTION]
+*/
+
+let challenge = () => {
+
 };
 
 
-module.exports = challengeFunction;
+module.exports = challenge;
