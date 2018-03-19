@@ -6,15 +6,18 @@
   "scripts": {
     "test": "jasmine",
     "start": "nodemon --watch src -x jasmine ./src/challenge.spec.js",
+    "archiveCurrentChallenge" : "node rebuild/rebuildChallengeAndChallengeSpec.js",
     "testArchive": "npm run archiveEasy && npm run archiveIntermediate",
-    "archiveEasy": "jasmine ./archive/easy/*",
-    "archiveIntermediate": "jasmine ./archive/intermediate/*",
-    "archiveHard": "jasmine ./archive/hard/*"
+    "testArchiveEasy": "jasmine ./archive/easy/*",
+    "testArchiveIntermediate": "jasmine ./archive/intermediate/*",
+    "testArchiveHard": "jasmine ./archive/hard/*"
   },
   "author": "Ryan Possardt",
   "license": "ISC",
   "dependencies": {
-    "nodemon": "^1.17.2"
+    "fs-readfile-promise": "^3.0.1",
+    "nodemon": "^1.17.2",
+    "write": "^1.0.3"
   },
   "devDependencies": {
     "jasmine": "^3.1.0"

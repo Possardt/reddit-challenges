@@ -4,7 +4,7 @@
   [POST DESCRIPTION]
 */
 
-let challenge = () => {
+const challenge = () => {
 
 };
 
