@@ -6,7 +6,7 @@ let archiveContents,
     challengeName;
 
 determineChallengeName = name => {
-  return (name.split('[Easy]') || name.split('[Intermediate]') || name.split('[Hard]'))[1]
+  return (name.split('[Random]') || name.split('[Easy]') || name.split('[Intermediate]') || name.split('[Hard]'))[1]
     .trim()
     .toLowerCase()
     .split(' ')
@@ -16,7 +16,8 @@ determineChallengeName = name => {
 determineChallengeFolder = name => {
   return name.indexOf('Easy') !== -1 ? 'easy' :
     name.indexOf('Intermediate') !== -1 ? 'intermediate' :
-    name.indexOf('Hard') !== -1 ? 'hard' : '';
+    name.indexOf('Hard') !== -1 ? 'hard' :
+    name.indexOf('Random') !== -1 ? 'random' : '';
 }
 
 readFile('src/challenge.js', 'utf-8')
@@ -24,7 +25,7 @@ readFile('src/challenge.js', 'utf-8')
     let challengeWithoutExport = contents
       .split('\n')
       .filter(line => {
-        if(line.match(/\[(Easy|Intermediate|Hard)\]\s.*/)){
+        if(line.match(/\[(Easy|Intermediate|Hard|Random)\]\s.*/)){
           challengeName = line;
         }
         return line !== 'module.exports = challenge;'
