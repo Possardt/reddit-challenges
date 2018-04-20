@@ -2,11 +2,13 @@ const readFile               = require('fs-readfile-promise');
 const writeFile              = require('write');
 const challengeFileTemplates = require('./challengeFileTemplates');
 
+const difficultyRegex = /\[(Easy|Intermediate|Hard|Random)\]\s/;
+
 let archiveContents,
     challengeName;
 
 determineChallengeName = name => {
-  return (name.split('[Random]') || name.split('[Easy]') || name.split('[Intermediate]') || name.split('[Hard]'))[1]
+  return (name.split(difficultyRegex))[2]
     .trim()
     .toLowerCase()
     .split(' ')
@@ -25,7 +27,7 @@ readFile('src/challenge.js', 'utf-8')
     let challengeWithoutExport = contents
       .split('\n')
       .filter(line => {
-        if(line.match(/\[(Easy|Intermediate|Hard|Random)\]\s.*/)){
+        if(line.match(difficultyRegex)){
           challengeName = line;
         }
         return line !== 'module.exports = challenge;'

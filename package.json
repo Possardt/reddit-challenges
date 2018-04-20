@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jasmine",
     "start": "nodemon --watch src -x jasmine ./src/challenge.spec.js",
-    "archiveCurrentChallenge" : "node rebuild/rebuildChallengeAndChallengeSpec.js",
+    "archiveCurrentChallenge": "node rebuild/rebuildChallengeAndChallengeSpec.js",
     "testArchive": "npm run archiveEasy && npm run archiveIntermediate",
     "testArchiveEasy": "jasmine ./archive/easy/*",
     "testArchiveIntermediate": "jasmine ./archive/intermediate/*",
